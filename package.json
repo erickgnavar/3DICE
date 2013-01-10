@@ -2,10 +2,10 @@
     "name": "dice",
     "version": "0.0.1",
     "dependencies": {
-        "express": "latest"
+        "express": "2.5.x"
     },
     "engine": {
-        "node": "latest",
-        "npm": "latest"
+        "node": "0.8.x",
+        "npm": "1.1.x"
     }
 }

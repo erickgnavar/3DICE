@@ -3,14 +3,19 @@ html(lang='en')
     head
         meta(charset='utf-8')
         title='Dados en 3D'
+        link(rel='stylesheet', type='text/css' , href='/static/bootstrap.css')
         link(rel='stylesheet', type='text/css' , href='/static/base.css')
     body
-        div#experiment
-            div#cube
-                div.face.one 1
-                div.face.two 2
-                div.face.three 3
-                div.face.four 4
-                div.face.five 5
-                div.face.six 6
+        section#container
+            div#controls
+                button#start.btn.btn-block.btn-primary Start
+                button#end.btn.btn-block.btn-danger Finish
+            div#experiment
+                div#cube
+                    div.face.one 1
+                    div.face.two 2
+                    div.face.three 3
+                    div.face.four 4
+                    div.face.five 5
+                    div.face.six 6
         script(type='text/javascript', src='/static/dice.js')

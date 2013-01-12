@@ -1,6 +1,22 @@
-function $(id) {
+var $ = function (id) {
     return document.getElementById(id);
-}
+};
+
+var generateRandomValue = function () {
+    var a = 1;
+    var b = 6;
+    var r = Math.random();
+    var result = a + ((b - a) * r);
+    return Math.round(result);
+};
+
+$('start').addEventListener('click', function (e) {
+    
+});
+
+$('end').addEventListener('click', function (e) {
+    
+});
 
 var xAngle, yAngle;
 xAngle = yAngle = 0;

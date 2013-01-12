@@ -1,6 +1,17 @@
+body {
+    background-color: rgba(50, 50, 50, 0.7);
+}
 #experiment {
     -webkit-perspective: 800;
     -webkit-perspective-origin: 50% 200px;
+}
+#container {
+    width: 400px;
+    margin: 3em auto;
+}
+#controls {
+    width: 400px;
+    margin: 0 auto 5em auto;
 }
 #cube {
     position: relative;
@@ -15,7 +26,7 @@
     height: 360px;
     width: 360px;
     padding: 20px;
-    background-color: rgba(50, 50, 50, 0.7);
+    background-color: #000;
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     font-size: 20em;

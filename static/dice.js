@@ -10,7 +10,7 @@ var generateRandomValue = function () {
     return Math.round(result);
 };
 
-var current = 0;
+var current;
 
 $('generate').addEventListener('click', function (e) {
     var flag = true;
@@ -36,4 +36,10 @@ var positions = {
 
 var changeFunction = function (x, y) {
    $('cube').style.webkitTransform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+   return;
 };
+
+(function () {
+    current = generateRandomValue();
+    changeFunction(positions[current][0], positions[current][1]);
+})();

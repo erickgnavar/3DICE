@@ -4,6 +4,7 @@ body {
 #experiment {
     -webkit-perspective: 800;
     -webkit-perspective-origin: 50% 200px;
+    -webkit-animation-timing-function: ease;
 }
 #container {
     width: 400px;

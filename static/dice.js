@@ -10,30 +10,30 @@ var generateRandomValue = function () {
     return Math.round(result);
 };
 
-$('start').addEventListener('click', function (e) {
-    
-});
+var current = 0;
 
-$('end').addEventListener('click', function (e) {
-    
-});
-
-var xAngle, yAngle;
-xAngle = yAngle = 0;
-document.addEventListener('keydown', function (e) {
-    switch(e.keyCode) {
-        case 37:
-            yAngle -= 90;
-            break;
-        case 38:
-            xAngle += 90;
-            break;
-        case 39:
-            yAngle += 90;
-            break;
-        case 40:
-            xAngle -= 90;
-            break;
+$('generate').addEventListener('click', function (e) {
+    var flag = true;
+    var value = generateRandomValue();
+    while(flag) {
+        value = generateRandomValue();
+        if(value != current) {
+            flag = false;
+            current = value;
+        }
     }
-    $('cube').style.webkitTransform = 'rotateX(' + xAngle + 'deg) rotateY(' + yAngle + 'deg)';
-}, false);
+    changeFunction(positions[value][0], positions[value][1]);
+});
+
+var positions = {
+    '1': [270, 0],
+    '2': [0, 0],
+    '3': [0, 270],
+    '4': [0, 180],
+    '5': [0, 90],
+    '6': [90, 180]
+};
+
+var changeFunction = function (x, y) {
+   $('cube').style.webkitTransform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+};
